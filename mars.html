@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="language" content="en"/>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta charset="utf-8">
+    <title>The Planets</title>
+    <link rel="icon" href="images/favicon.ico"/>
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@400;700&display=swap" rel="stylesheet">
+    <link href ="styles.min.css" type="text/css" rel="stylesheet"
+  </head>
+  <body>
+    <div class="ligne">
+    </div>
+    <header>
+      <div class="main_titre">
+        <h1>THE PLANETS</h1>
+      </div>
+      <div class="navbar">
+        <button class="hamburger" type="button" name="button">
+        <img src="images/icon-hamburger.svg">
+      </button>
+        <div class="planets">
+          <ul class="nav_menu">
+            <li class="list_item">
+              <a href="index.html" id="h_mercury">
+                <p>MERCURY</p>
+              </a>
+            </li>
+            <li class="list_item">
+              <a href="venus.html" id="h_venus">
+                <p>VENUS</p>
+              </a>
+            </li>
+            <li class="list_item">
+              <a href="earth.html" id="h_earth">
+                <p>EARTH</p>
+              </a>
+            </li>
+            <li class="list_item" id="page_active_mars">
+              <a href="mars.html" id="h_mars">
+                <p>MARS</p>
+              </a>
+            </li>
+            <li class="list_item">
+              <a href="jupiter.html" id="h_jupiter">
+                <p>JUPITER</p>
+              </a>
+            </li>
+            <li class="list_item">
+              <a href="saturn.html" id="h_saturn">
+                <p>SATURN</p>
+              </a>
+            </li>
+            <li class="list_item">
+              <a href="uranus.html" id="h_uranus">
+                <p>URANUS</p>
+              </a>
+            </li>
+            <li class="list_item">
+              <a href="neptune.html" id="h_neptune">
+                <p>NEPTUNE</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="presentation" id="prez">
+        <div class="visuel">
+          <img id="img_overview" src="images/planet-mars.svg" alt="Mercure">
+          <img id="img_internal_structure" src="images/planet-mars-internal.svg" alt="Inside Mercury">
+          <img id="img_surface_geology" src="images/geology-mars.png" alt="Mercure geology">
+        </div>
+        <div class="conteneur_explication">
+          <div class="conteneur_texte">
+            <div class="texte">
+              <p id="text_overview">Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System, being larger than only Mercury. In English, Mars carries the name of the Roman god of war and is often referred to as the "Red Planet".</p>
+              <p id="text_internal_structure">Like Earth, Mars has differentiated into a dense metallic core overlaid by less dense materials. Scientists initially determined that the core is at least partially liquid. Current models of its interior imply a core consisting primarily of iron and nickel with about 16–17% sulfur.</p>
+              <p id="text_surface_geology">Mars is a terrestrial planet whose surface consists of minerals containing silicon and oxygen, metals, and other elements that typically make up rock. The surface is primarily composed of tholeiitic basalt, although parts are more silica-rich than typical basalt.</p>
+            </div>
+            <div class="source">
+              <p class="source_texte">Source :
+                <a class="source_lien" href="https://en.wikipedia.org/wiki/Mars" target="_blank">Wikipédia</a>
+                <img class="source_image" src="images/icon-source.svg" href="https://en.wikipedia.org/wiki/Mars" target="_blank">
+                </p>
+            </div>
+          </div>
+          <div class="menu_explication">
+            <ol>
+              <li>
+                <button style="background-color:#d14e33" onclick="changeMenu(this.id);" id="btn_overview">OVERVIEW</button>
+              </li>
+              <li>
+               <button onclick="changeMenu(this.id);" id="btn_internal_structure">INTERNAL STRUCTURE</button>
+             </li>
+              <li>
+              <button onclick="changeMenu(this.id);" id="btn_surface_geology">SURFACE GEOLOGY</button>
+            </li>
+            </ol>
+          </div>
+        </div>
+
+      </div>
+      <div class="conteneur_chiffres">
+        <div class="chiffres">
+          <span>ROTATION TIME</span><br>
+          <span id ="chiffre">1.03 DAYS</span>
+        </div>
+        <div class="chiffres">
+          <span>REVOLUTION TIME</span><br>
+          <span id ="chiffre">1.88 YEARS</span>
+        </div>
+        <div class="chiffres">
+            <span>RADIUS</span><br>
+            <span id ="chiffre">3,389.5 KM</span>
+        </div>
+        <div class="chiffres">
+            <span>AVERAGE TEMP.</span><br>
+            <span id ="chiffre">-28°C</span>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script>
+  //Boutons texte différentes explication, images et couleurs boutons
+  function changeMenu(id) {
+    if (id=="btn_overview"){
+      document.getElementById("text_overview").style.display ="block" ;
+      document.getElementById("text_internal_structure").style.display = "none";
+      document.getElementById("text_surface_geology").style.display = "none";
+
+      document.getElementById("img_internal_structure").style.display="none";
+      document.getElementById("img_surface_geology").style.display="none";
+
+      document.getElementById("btn_overview").style.background="#d14e33";
+      document.getElementById("btn_surface_geology").style.background="none";
+      document.getElementById("btn_internal_structure").style.background="none";
+    }
+    if
+      (id=="btn_internal_structure"){
+      document.getElementById("text_internal_structure").style.display = "block";
+      document.getElementById("text_overview").style.display = "none";
+      document.getElementById("text_surface_geology").style.display = "none";
+
+      document.getElementById("img_internal_structure").style.display="block";
+      document.getElementById("img_surface_geology").style.display="none";
+
+      document.getElementById("btn_internal_structure").style.background="#d14e33";
+      document.getElementById("btn_surface_geology").style.background="none";
+      document.getElementById("btn_overview").style.background="none";
+    }
+    if(id=="btn_surface_geology") {
+    document.getElementById("text_surface_geology").style.display = "block";
+    document.getElementById("text_overview").style.display = "none";
+    document.getElementById("text_internal_structure").style.display = "none";
+
+    document.getElementById("img_internal_structure").style.display="none";
+    document.getElementById("img_surface_geology").style.display="block";
+
+    document.getElementById("btn_surface_geology").style.background="#d14e33";
+    document.getElementById("btn_overview").style.background="none";
+    document.getElementById("btn_internal_structure").style.background="none";
+    }
+  }
+  </script>
+  <script src="js/main.js">
+
+</script>
+</html>
